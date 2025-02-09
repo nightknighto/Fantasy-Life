@@ -947,8 +947,8 @@ BlzCreateItemWithSkin(FourCC("I03B"), 10584.9, -4770.3, FourCC("I03B"))
 BlzCreateItemWithSkin(FourCC("I03C"), -11262.8, -13993.7, FourCC("I03C"))
 BlzCreateItemWithSkin(FourCC("I03M"), 15295.0, 171.6, FourCC("I03M"))
 BlzCreateItemWithSkin(FourCC("I03M"), -10040.1, 14145.3, FourCC("I03M"))
-BlzCreateItemWithSkin(FourCC("fgdg"), -53.9, 2460.9, FourCC("fgdg"))
 BlzCreateItemWithSkin(FourCC("fgdg"), 894.4, 2454.2, FourCC("fgdg"))
+BlzCreateItemWithSkin(FourCC("fgdg"), -53.9, 2460.9, FourCC("fgdg"))
 end
 
 function CreateBuildingsForPlayer0()
@@ -970,11 +970,6 @@ local life
 
 u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3205.7, -3637.6, 204.660, FourCC("e000"))
 u = BlzCreateUnitWithSkin(p, FourCC("e00Y"), -15521.0, 15237.4, 224.677, FourCC("e00Y"))
-u = BlzCreateUnitWithSkin(p, FourCC("ewsp"), -2781.3, -3990.8, 25.291, FourCC("ewsp"))
-u = BlzCreateUnitWithSkin(p, FourCC("ewsp"), -2776.9, -3817.1, 25.291, FourCC("ewsp"))
-u = BlzCreateUnitWithSkin(p, FourCC("ewsp"), -3370.6, -4056.9, 25.291, FourCC("ewsp"))
-u = BlzCreateUnitWithSkin(p, FourCC("ewsp"), -3350.1, -3764.8, 25.291, FourCC("ewsp"))
-u = BlzCreateUnitWithSkin(p, FourCC("ewsp"), -2971.2, -4174.1, 25.291, FourCC("ewsp"))
 u = BlzCreateUnitWithSkin(p, FourCC("hmtt"), -180.1, 12397.1, 219.667, FourCC("hmtt"))
 u = BlzCreateUnitWithSkin(p, FourCC("hmtt"), 118.0, 2339.3, 199.232, FourCC("hmtt"))
 end
@@ -1102,7 +1097,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3118.0, -4177.2, 193.266, FourCC("e000"))
+u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3186.8, -4146.1, 193.266, FourCC("e000"))
 u = BlzCreateUnitWithSkin(p, FourCC("e00Y"), -15187.4, 15057.0, 343.190, FourCC("e00Y"))
 end
 
@@ -1123,7 +1118,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3393.2, -4141.7, 127.643, FourCC("e000"))
+u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3386.7, -4128.0, 127.643, FourCC("e000"))
 u = BlzCreateUnitWithSkin(p, FourCC("e00Y"), -15359.3, 15069.1, 294.760, FourCC("e00Y"))
 end
 
@@ -1144,7 +1139,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3317.9, -4127.5, 100.880, FourCC("e000"))
+u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3275.7, -4151.4, 100.880, FourCC("e000"))
 u = BlzCreateUnitWithSkin(p, FourCC("e00Y"), -15511.2, 15042.6, 138.320, FourCC("e00Y"))
 end
 
@@ -1186,7 +1181,7 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3222.7, -4172.1, 22.885, FourCC("e000"))
+u = BlzCreateUnitWithSkin(p, FourCC("e000"), -3079.4, -4152.2, 22.885, FourCC("e000"))
 u = BlzCreateUnitWithSkin(p, FourCC("e00Y"), -15363.2, 14826.5, 128.100, FourCC("e00Y"))
 end
 
