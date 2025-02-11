@@ -1,5 +1,5 @@
 import { MapPlayer, Timer } from "w3ts/index";
-import { ExtUnit } from "./ExtUnit";
+import type { ExtUnit } from "./ExtUnit";
 // import { RGB } from "./RGB and colortext";
 // import { JOB } from "Folders/Jobs/Job System";
 
@@ -8,11 +8,11 @@ const hintsMax = 10;
 export class ExtPlayer {
 	readonly mapPlayer: MapPlayer;
 
-	realName: string = "";
-	rename: string = "No Name Set";
+	realName = "";
+	rename = "No Name Set";
 
-	reputation: number = 0;
-	payTax: boolean = true;
+	reputation = 0;
+	payTax = true;
 
 	hero?: ExtUnit;
 	// AnimationRun: boolean = false;
@@ -44,11 +44,17 @@ export class ExtPlayer {
 	// bankDailyWithdraw: number = 0;
 
 	// bankPenaltyData: { timer: number, condition: number, totalTime: number }[] = [];
-	heroRace: "human" | "orc" | "nightelf" | "dwarf" | "goblin" = "human";
-	heroGender: "male" | "female" = "male";
+	hero_type:
+		| "human_male"
+		| "human_female"
+		| "orc_male"
+		| "orc_female"
+		| "nightelf_female"
+		| "dwarf_male"
+		| "goblin_male" = "human_male";
 
 	// job: JOB.Job = null;
-	jobsDone: number = 0;
+	jobsDone = 0;
 
 	Bounty = 0;
 	repTimer = 0;
@@ -126,7 +132,7 @@ export class ExtPlayer {
 	}
 
 	public static fromLocal() {
-		return this.fromHandle(GetLocalPlayer());
+		return ExtPlayer.fromHandle(GetLocalPlayer());
 	}
 
 	public static get passive() {
@@ -134,11 +140,11 @@ export class ExtPlayer {
 	}
 
 	public static get hostile() {
-		return this.fromIndex(PLAYER_NEUTRAL_AGGRESSIVE);
+		return ExtPlayer.fromIndex(PLAYER_NEUTRAL_AGGRESSIVE);
 	}
 
 	public isPlaying() {
-		return this.mapPlayer.slotState == PLAYER_SLOT_STATE_PLAYING && this.mapPlayer.controller == MAP_CONTROL_USER;
+		return this.mapPlayer.slotState === PLAYER_SLOT_STATE_PLAYING && this.mapPlayer.controller === MAP_CONTROL_USER;
 	}
 
 	/**
@@ -177,13 +183,13 @@ export function SetupExtPlayers() {
 
 		Timer.create().start(0, false, () => {
 			for (let i = 0; i < bj_MAX_PLAYER_SLOTS; i++) {
-				let p = ExtPlayers[i];
+				const p = ExtPlayers[i];
 				if (p.isPlaying()) {
 					ExtPlayersUsers.push(p);
 				}
 			}
 		});
 	} catch (e) {
-		print("SetupExtPlayers: " + e);
+		print(`SetupExtPlayers: ${e}`);
 	}
 }

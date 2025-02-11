@@ -1,4 +1,5 @@
-import { Unit, Item, MapPlayer } from "w3ts/index";
+import { Unit, type Item, type MapPlayer } from "w3ts/index";
+import { ExtPlayer } from "./ExtPlayer";
 
 export class ExtUnit extends Unit {
 	public static create(owner: MapPlayer, unitId: number, x: number, y: number, face: number) {
@@ -10,7 +11,7 @@ export class ExtUnit extends Unit {
 	 * Unit ceases to exist when it is decayed or removed.
 	 */
 	public get exist() {
-		return this.typeId != 0;
+		return this.typeId !== 0;
 	}
 
 	public dropItemFast(it: Item) {
@@ -39,5 +40,13 @@ export class ExtUnit extends Unit {
 			SetTextTagPermanentBJ(textTag, false);
 			SetTextTagLifespanBJ(textTag, 1.0);
 		}
+	}
+
+	public static fromEvent(): ExtUnit {
+		const u = Unit.fromEvent();
+		if (!u) {
+			throw "Unit from event is undefined";
+		}
+		return u as ExtUnit;
 	}
 }

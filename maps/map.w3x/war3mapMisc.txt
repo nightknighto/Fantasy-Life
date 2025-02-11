@@ -48,6 +48,7 @@ ReviveLevelFactor=0.0
 ReviveMaxFactor=0.0
 ReviveMaxTimeFactor=0.0
 ReviveTimeFactor=0.0
+StrAttackBonus=0.0
 StrHitPointBonus=15.0
 SummonedKillFactor=0.0
 TradingIncLarge=0
